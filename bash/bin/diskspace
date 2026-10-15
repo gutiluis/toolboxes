@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# descr: disk space output
+
+ds () {
+    echo "Disk Space Utilization For $HOSTNAME"
+    df -h
+}

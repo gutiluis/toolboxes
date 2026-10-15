@@ -1,0 +1,17 @@
+{
+    "name": "javascript-toolbox",
+    "version": "0.1.0",
+    "description": "Small, reusable JavaScript utilities for scripting and development.",
+    "type": "module",
+    "engines": {
+        "node": ">=22"
+    },
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "scripts": {
+        "test": "node --test",
+        "lint": "find src -type f -name '*.js' -exec node --check {} \\;"
+    },
+    "license": "MIT"
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# async-child
+# descr: asynchronous execution demo child
+
+echo "Child: child is running..."
+sleep 5
+echo "Child: child is done. Exiting."

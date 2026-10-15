@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# asynchronous execution demo parent. background execution + redirection + temporary file cleanup of child. never display the file
+
+echo "Parent: starting..."
+
+echo "Parent: launching child script..."
+# not a subshell. is a background process which inherits parent's file descriptors
+# child inherits parent's stdout/stderr
+# start asyn-child but don't wait for it to finish
+# ./async-child &
+tmpdir=$(mktemp -d)
+# removes the temporary directory automatically when the parent exits
+trap 'rm -rf "$tmpdir"' EXIT
+# redirect its descriptors
+./async-child >"$tmpdir/stdout" 2>"$tmpdir/stderr" &
+# assign the pid variable with the value of $! shell parameter
+pid=$!
+echo "Parent: child (PID= $pid) launched."
+
+echo "Parent: continuing..."
+sleep 2
+
+echo "Parent: pausing to wait for child to finish..."
+wait "$pid"
+
+echo "Parent: child is finished. Continuing..."
+
+echo "--- Child stdout ---"
+cat "$tmpdir/stdout"
+
+echo "--- Child stderr ---"
+cat "$tmpdir/stderr"
+
+echo "Parent: parent is done. Exiting."

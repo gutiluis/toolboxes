@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Toolbox Browser Tests</title>
+</head>
+<body>
+    <h1>Browser URL Tests</h1>
+    <p id="url"></p>
+    <p id="pathname"></p>
+
+    <script type="module">
+        import {
+            getCurrentUrl,
+            getPathname,
+        } from "../../src/browser/url.js";
+
+        document.querySelector("#url").textContent = getCurrentUrl();
+        document.querySelector("#pathname").textContent = getPathname();
+    </script>
+</body>
+</html>

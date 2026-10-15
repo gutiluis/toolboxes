@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "technobool-toolbox"
+version = "0.1.0"
+description = "Small, reusable Python tools and utilities for scripting, automation, and development."
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+maintainers = [
+    { name = "Luis Gutierrez" },
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/gutiluis/python-toolbox"
+Repository = "https://github.com/gutiluis/python-toolbox"
+Issues = "https://github.com/gutiluis/python-toolbox/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
