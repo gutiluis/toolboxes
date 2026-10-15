@@ -1,5 +1,18 @@
 # Toolboxes
 
-- [Bash Toolbox](https://github.com/gutiluis/bash-toolbox)
-- [JavaScript Toolbox](https://github.com/gutiluis/javascript-toolbox)
-- [Python Toolbox](https://github.com/gutiluis/python-toolbox)
+- [Bash](bash/)
+- [C](c/)
+- [C++](cpp/)
+- [C# / .NET](dotnet/)
+- [Go](go/)
+- [Java](java/)
+- [JavaScript](javascript/)
+- [Perl](perl/)
+- [PowerShell](powershell/)
+- [Python](python/)
+- [Ruby](ruby/)
+- [Rust](rust/)
+- [SQL](sql/)
+- [Swift](swift/)
+- [TypeScript](typescript/)
+
