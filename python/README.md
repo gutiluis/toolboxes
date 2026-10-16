@@ -1,8 +1,6 @@
 # Python Toolbox
 
-A collection of small, reusable Python tools and utilities for everyday scripting, automation, and development.
 
-The project keeps tools **small, reusable, composable, command-line friendly, and easy to test**.
 
 ## Structure
 
@@ -82,18 +80,6 @@ Run the tests:
 pytest
 ```
 
-## Design Principles
-
-* Small, focused utilities
-* Reusable Python code
-* Command-line friendly
-* Minimal dependencies
-* Standard library where practical
-* Easy to test
-* Composable tools
-* Clear interfaces
-* No unnecessary abstractions
-
 ## Package
 
 The package is designed for distribution through PyPI so the utilities can be installed and reused across projects.
@@ -101,8 +87,4 @@ The package is designed for distribution through PyPI so the utilities can be in
 ## Status
 
 Currently under development.
-
-## License
-
-See [LICENSE](LICENSE).
 

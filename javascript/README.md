@@ -1,13 +1,11 @@
 # JavaScript Toolbox
 
-A collection of small, reusable JavaScript utilities for scripting and development.
-
 ## Requirements
 
 - Node.js 22 or later
 - npm
 
-## Project Structure
+## Structure
 
 ```text
 src/
@@ -151,8 +149,4 @@ Implement reusable utilities under `src/`, add automated tests under `tests/`, a
 - `src/` — library implementation.
 - `tests/` — automated tests.
 - `examples/` — runnable usage examples.
-
-## License
-
-See [LICENSE](LICENSE) for license information.
 
