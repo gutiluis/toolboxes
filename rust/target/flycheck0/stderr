@@ -1,5 +1,0 @@
-   0.004216458s  INFO prepare_target{force=false package_id=toolbox v0.1.0 (/Users/lg/toolboxes/rust) target="functions"}: cargo::core::compiler::fingerprint: dependency on `toolbox` is newer than we are 1792609517.223304711s > 1792600536.240079750s "/Users/lg/toolboxes/rust"
-   0.004284417s  INFO prepare_target{force=false package_id=toolbox v0.1.0 (/Users/lg/toolboxes/rust) target="functions"}: cargo::core::compiler::fingerprint: fingerprint dirty for toolbox v0.1.0 (/Users/lg/toolboxes/rust)/Check { test: true }/TargetInner { kind: "test", name: "functions", benched: false, ..: with_path("/Users/lg/toolboxes/rust/tests/functions.rs", Edition2024) }
-   0.004295125s  INFO prepare_target{force=false package_id=toolbox v0.1.0 (/Users/lg/toolboxes/rust) target="functions"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDependency { unit: UnitIndex(0), dep_mtime: FileTime { seconds: 1792609517, nanos: 223304711 }, max_mtime: FileTime { seconds: 1792600536, nanos: 240079750 } })
-    Checking toolbox v0.1.0 (/Users/lg/toolboxes/rust)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
