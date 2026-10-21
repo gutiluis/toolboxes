@@ -1,5 +1,5 @@
 {
-    "name": "javascript-toolbox",
+    "name": "toolbox",
     "version": "0.1.0",
     "description": "Small, reusable JavaScript utilities for scripting and development.",
     "type": "module",

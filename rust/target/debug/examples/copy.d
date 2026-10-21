@@ -1,0 +1,1 @@
+/Users/lg/toolboxes/rust/target/debug/examples/copy: /Users/lg/toolboxes/rust/examples/copy.rs /Users/lg/toolboxes/rust/src/functions/data_types.rs /Users/lg/toolboxes/rust/src/functions/formatting.rs /Users/lg/toolboxes/rust/src/functions/output.rs /Users/lg/toolboxes/rust/src/functions.rs /Users/lg/toolboxes/rust/src/lib.rs

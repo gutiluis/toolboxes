@@ -1,5 +1,5 @@
 {
-  "name": "@gutiluis/typescript-toolbox",
+  "name": "toolbox",
   "version": "1.0.0",
   "description": "A collection of reusable TypeScript functions and examples for practicing data types, type annotations, and common language features.",
   "private": true,
