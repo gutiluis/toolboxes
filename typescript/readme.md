@@ -8,7 +8,7 @@ A collection of reusable TypeScript functions and examples for practicing data t
 typescript/
 ├── src/
 │   └── functions/
-│       └── types.ts
+│       └── dataTypes.ts
 ├── examples/
 ├── scripts/
 ├── tests/
@@ -55,6 +55,3 @@ identity<boolean>(true);
 - TypeScript
 - tsx
 
-## License
-
-MIT

@@ -28,7 +28,7 @@ The project keeps tools **small, reusable, composable, command-line friendly, an
 ## Design Principles
 
 * Small, focused utilities
-* Reusable Python code
+* Reusable code
 * Command-line friendly
 * Minimal dependencies
 * Standard library where practical

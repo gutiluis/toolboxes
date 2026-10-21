@@ -83,7 +83,3 @@ python3 -m unittest discover -s tests -v
 
 The package is configured for installation through `pyproject.toml` and is intended for eventual distribution through PyPI.
 
-## Status
-
-Currently under development.
-
