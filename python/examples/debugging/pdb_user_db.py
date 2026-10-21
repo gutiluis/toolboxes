@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+
+"""pdb user db initalization and management without hash"""
+
+import pdb
 import os
 
 
@@ -63,7 +69,6 @@ def delete_user(username):
     
     print(f"User {username} deleted successfully.")
 
-# Main function to demonstrate usage
 def main():
     initialize_db()  # Initialize the database (if not already initialized)
     
@@ -78,7 +83,9 @@ def main():
         print(user)
     
     # Authenticate user
+    pdb.set_trace()
     username = input("\nEnter your username to login: ")
+    breakpoint()
     password = input("Enter your password: ")
     if authenticate_user(username, password):
         print(f"Welcome back, {username}!")
@@ -86,11 +93,14 @@ def main():
         print("Invalid username or password.")
     
     # Update password
+    breakpoint()
     username_to_update = input("\nEnter the username to update the password: ")
+    breakpoint()
     new_password = input("Enter the new password: ")
     update_password(username_to_update, new_password)
     
     # Delete user
+    breakpoint()
     username_to_delete = input("\nEnter the username to delete: ")
     delete_user(username_to_delete)
 

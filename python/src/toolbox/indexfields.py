@@ -1,5 +1,6 @@
-# src/toolbox/fields.py
+"""Field extraction"""
 
-def fields_from_index(fields, index):
+
+def main(fields, index):
     """Return fields starting at the given index."""
     return fields[index:]

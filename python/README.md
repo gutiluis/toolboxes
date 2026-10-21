@@ -1,14 +1,15 @@
 # Python Toolbox
 
-
+A collection of small, reusable Python utilities for scripting, automation, and development.
 
 ## Structure
 
 ```text
-python-toolbox/
+python/
 ├── src/
 │   └── toolbox/             # Reusable Python modules
-├── tests/                   # pytest tests
+├── tests/                   # unittest test suite
+├── examples/                # Usage examples and debugging exercises
 ├── docs/                    # Documentation
 ├── pyproject.toml           # Project configuration
 ├── README.md
@@ -20,7 +21,7 @@ python-toolbox/
 Reusable functionality lives under `src/toolbox/`.
 
 ```python
-from toolbox.fields import fields_from_index
+from toolbox.indexfields import main
 ```
 
 Modules are organized by purpose rather than by application.
@@ -28,61 +29,59 @@ Modules are organized by purpose rather than by application.
 ```text
 src/toolbox/
 ├── __init__.py
-├── fields.py
-├── files.py
-├── csv.py
-├── json.py
-└── shell.py
+├── indexfields.py
+├── listfiles.py
+└── user_db.py
 ```
 
-The modules are intended to remain small and focused so that individual utilities can be reused independently.
+Keep modules small and focused so individual utilities can be reused independently.
 
 ## Testing
 
-Tests use **pytest** and live under `tests/`.
+Tests use Python's built-in **unittest** framework and live under `tests/`.
 
-Run the complete test suite with:
+Run the complete test suite:
 
 ```bash
-pytest
+python3 -m unittest discover -s tests -v
 ```
 
 Run a specific test file:
 
 ```bash
-pytest tests/test_fields.py
+python3 -m unittest discover -s tests -p 'test_user_db.py' -v
 ```
 
-Run a specific test:
+Run a specific test module, provided `tests/` is a Python package:
 
 ```bash
-pytest tests/test_fields.py::test_fields_from_index
+python3 -m unittest tests.test_user_db -v
 ```
 
 ## Development
 
-Create a virtual environment:
+Create and activate a virtual environment:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the project in editable mode:
+Install the package in editable mode:
 
 ```bash
-python -m pip install -e .
+python3 -m pip install -e .
 ```
 
 Run the tests:
 
 ```bash
-pytest
+python3 -m unittest discover -s tests -v
 ```
 
 ## Package
 
-The package is designed for distribution through PyPI so the utilities can be installed and reused across projects.
+The package is configured for installation through `pyproject.toml` and is intended for eventual distribution through PyPI.
 
 ## Status
 
