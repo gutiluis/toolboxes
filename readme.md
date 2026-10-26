@@ -66,8 +66,6 @@ If you run into any issues or have questions, please check our [SUPPORT.md](http
 ## Community
 
 Information on reporting bugs, getting help, finding third-party tools, and sample applications can be found through our **Community** channels:
-
-* **Discord:** [Community channel](https://discord.gg/ajVdrQnZ4h)
 * **Slack:** [technobool.slack.com](https://technobool.slack.com)
 * **GitHub Discussions:** [Open a discussion](https://github.com/gutiluis/bash-toolbox/discussions)
 
