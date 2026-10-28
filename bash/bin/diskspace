@@ -2,7 +2,9 @@
 
 # descr: disk space output
 
-ds () {
+ds() {
     echo "Disk Space Utilization For $HOSTNAME"
     df -h
 }
+
+ds

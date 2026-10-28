@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# determine if an integer is within a specified range of values
+
+MIN_VAL=1
+MAX_VAL=100
+
+INT="${1}"
+# extended regular expression
+# ^ metacharacter. anchor. they cause the match to occur only if the regular expression is found at the beginning of the line(^) or at the end of the line ($)
+# ? metacharacter
+# + metacharacter
+# [ ] metacharacter
+# - metacharacter
+# $ metacharacter. anchor. they cause the match to occur only if the regular expression is found at the beginning of the line(^) or at the end of the line ($)
+if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
+    if [ "$INT" -ge "$MIN_VAL" -a "$INT" -le "$MAX_VAL" ]; then
+        echo "$INT is within $MIN_VAL to $MAX_VAL."
+    else
+        echo "$INT is out of range."
+    fi
+else
+    echo "INT is not an integer." >&2
+    exit 1
+fi
+

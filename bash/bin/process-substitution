@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# process substitution
+
+while read -r attr links owner group size date time filename; do
+    cat <<- EOF
+        Filename: $filename
+        Size: $size
+        Owner: $owner
+        Group: $group
+        Modified: $date $time
+        Links: $links
+        Attributes: $attr
+EOF
+done < <(ls -l | tail -n +2)
+
+echo "NOT IMPLEMENTED!" >&2
+exit 1 

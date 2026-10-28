@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# enter 3 arguments from the CLI
+
+my_args() {
+    echo "first: ${1}, second: ${2}, third: ${3}"
+}
+
+my_args "${1}" "${2}" "${3}"

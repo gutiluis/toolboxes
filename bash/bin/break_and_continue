@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# exit a loop using break keyword instead of exit command. leaves the loop and advance to the next code block
+
+
+
+while true; do
+    echo "Scanning ports in the loop"
+    break
+done
+
+echo "This code block will be reached."

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# filename: default-environment-variables.sh
-# desc: print default shell environment variables
+# filename: environment-variables
+# desc: print shell environment variables and values
 
+echo ${!BASH*}
 echo ${BASH_VERSION}
 echo ${BASHPID}
 echo ${GROUPS}

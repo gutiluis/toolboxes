@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+# print the ip through CLI arguments
+
+for ip_address in "$@"; do
+    echo "[INFO] Taking some action on IP address ${ip_address}"
+done
