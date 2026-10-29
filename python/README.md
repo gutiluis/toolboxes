@@ -10,10 +10,8 @@ python/
 │   └── toolbox/             # Reusable Python modules
 ├── tests/                   # unittest test suite
 ├── examples/                # Usage examples and debugging exercises
-├── docs/                    # Documentation
 ├── pyproject.toml           # Project configuration
 ├── README.md
-└── LICENSE
 ```
 
 ## Library

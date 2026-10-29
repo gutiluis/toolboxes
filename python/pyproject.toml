@@ -10,9 +10,11 @@ readme = "README.md"
 requires-python = ">=3.14"
 license = "MIT"
 maintainers = [
-    { name = "Luis Guti" },
+    { name = "Luis Gut" },
 ]
-dependencies = []
+dependencies = [
+    "Jinja2",
+]
 
 [project.urls]
 Homepage = "https://github.com/gutiluis/toolboxes/tree/main/python"
