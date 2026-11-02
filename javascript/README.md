@@ -76,9 +76,9 @@ console.log(getPathname());
 Playwright utilities run in Node.js and automate Chromium.
 
 ```javascript
-import { launchChromium } from "./src/browser/chromium.js";
+import { openChromiumPage } from "./src/browser/chromium.js";
 
-const { browser, page } = await launchChromium("http://localhost:8000");
+const { browser, page } = await openChromiumPage("http://localhost:8000");
 
 console.log(await page.title());
 
