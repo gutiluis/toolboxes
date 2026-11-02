@@ -11,28 +11,19 @@
 src/
 ├── index.js
 ├── language/
-│   └── keywords.js
 ├── filesystem/
-│   ├── cwd.js
-│   └── list-dir.js
 ├── api/
-│   └── fetch.js
 └── browser/
-    └── url.js
 
 tests/
 ├── language/
 ├── filesystem/
 ├── api/
-│   └── fetch.test.js
 └── browser/
-    └── url.test.js
 
 examples/
 ├── api/
-│   └── fetch.js
 └── browser/
-    └── index.html
 ```
 
 ## Installation
@@ -43,96 +34,75 @@ Install dependencies:
 npm install
 ```
 
-To install the published package in another project:
+Install Chromium for Playwright:
 
 ```bash
-npm install javascript-toolbox
+npx playwright install chromium
 ```
 
 ## Usage
 
 ### Language Utilities
 
-Language utilities provide reusable JavaScript language helpers.
-
+Reusable JavaScript language helpers.
 
 ### Filesystem Utilities
 
-Filesystem utilities run in Node.js.
-
+Filesystem utilities for Node.js.
 
 ### API Utilities
 
-API utilities provide HTTP request helpers using the native Fetch API.
+HTTP request helpers using the native Fetch API.
 
 ```javascript
 import { getJson } from "./src/api/fetch.js";
 
-const users = await getJson(
-    "https://jsonplaceholder.typicode.com/users",
-);
+const users = await getJson("https://jsonplaceholder.typicode.com/users");
 
 console.log(users);
 ```
 
-`getJson(url)` sends an HTTP GET request, throws an error for unsuccessful HTTP responses, and returns the parsed JSON data.
-
 ### Browser Utilities
 
-Browser utilities use native browser APIs and run in a web browser.
+Browser utilities using native browser APIs.
 
 ```javascript
-import {
-    getCurrentUrl,
-    getPathname,
-} from "./src/browser/url.js";
+import { getCurrentUrl, getPathname } from "./src/browser/url.js";
 
 console.log(getCurrentUrl());
 console.log(getPathname());
 ```
 
-- `getCurrentUrl()` returns the current page URL.
-- `getPathname()` returns the pathname of the current page.
+Playwright utilities run in Node.js and automate Chromium.
+
+```javascript
+import { launchChromium } from "./src/browser/chromium.js";
+
+const { browser, page } = await launchChromium("http://localhost:8000");
+
+console.log(await page.title());
+
+await browser.close();
+```
 
 ## Examples
 
-### API Example
-
-Run the API example from the project root:
+Run examples from the project root:
 
 ```bash
 node examples/api/fetch.js
+node examples/browser/chromium.js http://localhost:8000
 ```
 
-This example requests sample user data from JSONPlaceholder and prints the response to the terminal. An internet connection is required.
-
-### Browser Example
-
-Start a local HTTP server from the project root:
+To serve the browser example:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Open the browser example:
-
-<http://localhost:8000/examples/browser/>
-
-Stop the server with `Ctrl+C`.
+Open `http://localhost:8000/examples/browser/` in your browser.
 
 ## Testing
-
-Run the API tests:
-
-```bash
-node --test tests/api/fetch.test.js
-```
-
-Run the browser URL tests:
-
-```bash
-node --test tests/browser/url.test.js
-```
 
 Run all tests:
 
@@ -140,13 +110,15 @@ Run all tests:
 node --test
 ```
 
-The tests use Node.js's built-in test runner and assertion modules.
+Run individual tests:
+
+```bash
+node --test tests/api/fetch.test.js
+node --test tests/browser/url.test.js
+```
 
 ## Development
 
-Implement reusable utilities under `src/`, add automated tests under `tests/`, and provide usage demonstrations under `examples/`.
-
-- `src/` — library implementation.
+- `src/` — reusable utilities.
 - `tests/` — automated tests.
-- `examples/` — runnable usage examples.
-
+- `examples/` — usage demonstrations.

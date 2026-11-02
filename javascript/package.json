@@ -13,5 +13,8 @@
         "test": "node --test",
         "lint": "find src -type f -name '*.js' -exec node --check {} \\;"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "playwright": "^1.64.1"
+    }
 }

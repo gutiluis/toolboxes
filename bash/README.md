@@ -59,18 +59,16 @@ Then execute tools directly:
 
 This repository contains Bash automation examples and tools involving:
 
-* `awk`
-* `tee`
-* `sed`
-* `gawk`
-* `tr`
-* `case`
-* `Docker`
-* `until`
-* `while`
-* process management
-* shell redirection
-* subshells
-* traps
-* asynchronous execution
-
+- `awk`
+- `tee`
+- `sed`
+- `tr`
+- `case`
+- `Docker`
+- `until`
+- `while`
+- process management
+- shell redirection
+- subshells
+- traps
+- asynchronous execution
