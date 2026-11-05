@@ -1,14 +1,5 @@
 # Shell Automation
 
-## Structure
-
-```text
-bash-toolbox/
-├── bin/    # Executable Bash tools
-├── lib/    # Shared Bash implementation
-└── test/   # Bats tests
-```
-
 ### Executables
 
 Tools intended to be executed directly live under `bin/`.

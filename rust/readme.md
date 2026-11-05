@@ -2,23 +2,6 @@
 
 A collection of small, reusable Rust utilities and examples.
 
-## Structure
-
-```text
-rust/
-├── Cargo.toml
-├── Cargo.lock
-├── README.md
-├── .gitignore
-├── src/
-│   ├── lib.rs
-│   └── functions.rs
-├── examples/
-│   └── ...
-└── tests/
-    └── functions.rs
-```
-
 ## Usage
 
 Build the library:

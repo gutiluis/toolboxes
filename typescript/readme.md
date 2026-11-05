@@ -2,21 +2,6 @@
 
 A collection of reusable TypeScript functions and examples for practicing data types, type annotations, and common language features.
 
-## Structure
-
-```text
-typescript/
-├── src/
-│   └── functions/
-│       └── dataTypes.ts
-├── examples/
-├── scripts/
-├── tests/
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
 ## Types
 
 The toolbox includes examples of:
@@ -54,4 +39,3 @@ identity<boolean>(true);
 - Node.js
 - TypeScript
 - tsx
-

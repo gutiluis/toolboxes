@@ -1,42 +1,16 @@
 # JavaScript Toolbox
 
+Reusable JavaScript utilities for language operations, filesystem management, HTTP requests, and browser automation.
+
 ## Requirements
 
 - Node.js 22 or later
 - npm
 
-## Structure
-
-```text
-src/
-├── index.js
-├── language/
-├── filesystem/
-├── api/
-└── browser/
-
-tests/
-├── language/
-├── filesystem/
-├── api/
-└── browser/
-
-examples/
-├── api/
-└── browser/
-```
-
 ## Installation
-
-Install dependencies:
 
 ```bash
 npm install
-```
-
-Install Chromium for Playwright:
-
-```bash
 npx playwright install chromium
 ```
 
@@ -55,11 +29,16 @@ Filesystem utilities for Node.js.
 HTTP request helpers using the native Fetch API.
 
 ```javascript
-import { getJson } from "./src/api/fetch.js";
+import { getJson, inspectHttp } from "./src/api/fetch.js";
 
 const users = await getJson("https://jsonplaceholder.typicode.com/users");
+const result = await inspectHttp("https://httpbin.org/get");
 
 console.log(users);
+console.log(result.request.headers);
+console.log(result.response.headers);
+console.log(result.response.data);
+console.log(result.response.bodyLength);
 ```
 
 ### Browser Utilities
@@ -73,7 +52,7 @@ console.log(getCurrentUrl());
 console.log(getPathname());
 ```
 
-Playwright utilities run in Node.js and automate Chromium.
+Playwright utilities automate Chromium from Node.js.
 
 ```javascript
 import { openChromiumPage } from "./src/browser/chromium.js";
@@ -94,23 +73,21 @@ node examples/api/fetch.js
 node examples/browser/chromium.js http://localhost:8000
 ```
 
-To serve the browser example:
+Serve browser examples:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/examples/browser/` in your browser.
+Open `http://localhost:8000/examples/browser/`.
 
 ## Testing
-
-Run all tests:
 
 ```bash
 node --test
 ```
 
-Run individual tests:
+Run individual test files:
 
 ```bash
 node --test tests/api/fetch.test.js

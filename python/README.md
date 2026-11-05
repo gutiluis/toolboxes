@@ -2,18 +2,6 @@
 
 A collection of small, reusable Python utilities for scripting, automation, and development.
 
-## Structure
-
-```text
-python/
-├── src/
-│   └── toolbox/             # Reusable Python modules
-├── tests/                   # unittest test suite
-├── examples/                # Usage examples and debugging exercises
-├── pyproject.toml           # Project configuration
-├── README.md
-```
-
 ## Library
 
 Reusable functionality lives under `src/toolbox/`.
@@ -23,14 +11,6 @@ from toolbox.indexfields import main
 ```
 
 Modules are organized by purpose rather than by application.
-
-```text
-src/toolbox/
-├── __init__.py
-├── indexfields.py
-├── listfiles.py
-└── user_db.py
-```
 
 Keep modules small and focused so individual utilities can be reused independently.
 
@@ -80,4 +60,3 @@ python3 -m unittest discover -s tests -v
 ## Package
 
 The package is configured for installation through `pyproject.toml` and is intended for eventual distribution through PyPI.
-

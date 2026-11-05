@@ -2,15 +2,6 @@
 
 A collection of reusable PowerShell scripts and utilities for everyday command-line tasks.
 
----
-
-## Structure
-
-- `functions/` _ Reusable Powershell functions.
-- `examples/` _ Usage examples.
-- `scripts/` — Standalone PowerShell scripts.
-- `tests/` — Pester tests.
-
 ## Usage
 
 Run a script from the PowerShell terminal:
