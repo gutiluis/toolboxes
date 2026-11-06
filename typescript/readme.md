@@ -34,8 +34,27 @@ strings("TypeScript");
 identity<boolean>(true);
 ```
 
+## Neovim Documentation
+
+The project includes custom Tailwind CSS documentation integrated into Neovim's LSP hover functionality.
+
+Hover over a Tailwind CSS utility class to display documentation directly inside Neovim.
+
+Documentation includes:
+
+- Original Tailwind CSS utility class.
+- Utility category and description.
+- Equivalent CSS properties and values.
+- Default behavior and relevant details.
+
+For example, hovering over `hover:text-green-200` displays the corresponding text color utility documentation, including its hover variant and CSS equivalent.
+
+This provides inline Tailwind CSS reference documentation without leaving the editor.
+
 ## Requirements
 
 - Node.js
 - TypeScript
 - tsx
+- Neovim with configured LSP support
+- Tailwind CSS documentation integration
