@@ -26,4 +26,19 @@ export const utilities: UtilityDocumentation[] = [
             "flex-1",
         ],
     },
+
+    {
+        name: "mx-auto",
+        category: "Spacing / Margin",
+        description:
+            "Sets the left and right margins to auto, centering an element horizontally when its width is constrained.",
+        css: `margin-inline: auto;`,
+        behavior: [
+            "Applies automatic inline margins",
+            "Centers the element horizontally",
+            "Does not change the element's width",
+        ],
+        example: `<div class="mx-auto">Centered content</div>`,
+        related: ["mx-0", "mx-1", "my-auto"],
+    },
 ];
