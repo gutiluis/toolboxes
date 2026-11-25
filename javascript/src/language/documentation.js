@@ -138,4 +138,131 @@ export const DOM_API_DOCUMENTATION = {
         returns: "undefined",
         seeAlso: ["getItem", "removeItem"],
     },
+
+    Event: {
+        category: "DOM API",
+        description:
+            "Represents an event that occurs in the DOM. The browser creates an Event object and passes it to the event handler when an event is dispatched.",
+        syntax: [
+            "element.addEventListener('click', (event) => {})",
+            "event.type",
+            "event.target",
+            "event.currentTarget",
+        ],
+        returns: "Event object",
+        notes: [
+            "Event is the base interface for many DOM event types.",
+            "The event parameter is conventionally named event or e.",
+            "Provides information about the event and methods to control its behavior.",
+        ],
+        seeAlso: [
+            "EventTarget",
+            "addEventListener",
+            "preventDefault",
+            "stopPropagation",
+        ],
+    },
+
+    EventTarget: {
+        category: "DOM API",
+        description:
+            "An interface implemented by objects that can receive events and may have listeners for them. Element, Document, and Window implement EventTarget.",
+        syntax: [
+            "target.addEventListener(type, listener)",
+            "target.removeEventListener(type, listener)",
+            "target.dispatchEvent(event)",
+        ],
+        returns: "EventTarget",
+        seeAlso: ["Event", "addEventListener", "removeEventListener"],
+    },
+
+    addEventListener: {
+        category: "EventTarget",
+        description:
+            "Registers an event handler on an EventTarget. The handler executes whenever an event of the specified type is dispatched.",
+        syntax: [
+            "target.addEventListener(type, listener)",
+            "target.addEventListener(type, listener, options)",
+        ],
+        returns: "undefined",
+        example: [
+            "productForm.addEventListener('submit', (event) => {",
+            "    event.preventDefault();",
+            "});",
+        ],
+        notes: [
+            "The browser passes an Event object to the listener.",
+            "Multiple listeners can be registered for the same event type.",
+            "Supports options such as once, capture, and passive.",
+        ],
+        seeAlso: ["Event", "removeEventListener", "EventTarget"],
+    },
+
+    removeEventListener: {
+        category: "EventTarget",
+        description:
+            "Removes an event listener previously registered with addEventListener.",
+        syntax: ["target.removeEventListener(type, listener)"],
+        returns: "undefined",
+        notes: [
+            "The listener reference must match the registered callback.",
+            "The event type and capture setting must also match.",
+        ],
+        seeAlso: ["addEventListener", "EventTarget"],
+    },
+
+    preventDefault: {
+        category: "Event",
+        description:
+            "Cancels the default action associated with an event, provided that the event is cancelable.",
+        syntax: ["event.preventDefault()"],
+        returns: "undefined",
+        example: [
+            "form.addEventListener('submit', (event) => {",
+            "    event.preventDefault();",
+            "});",
+        ],
+        notes: [
+            "Does not stop event propagation.",
+            "Does not prevent the event listener from executing.",
+            "Has no effect on non-cancelable events.",
+        ],
+        seeAlso: ["Event", "stopPropagation"],
+    },
+
+    stopPropagation: {
+        category: "Event",
+        description:
+            "Prevents the event from propagating further through the DOM event flow.",
+        syntax: ["event.stopPropagation()"],
+        returns: "undefined",
+        notes: [
+            "Does not prevent the default browser action.",
+            "Does not stop other listeners on the same element.",
+        ],
+        seeAlso: ["Event", "stopImmediatePropagation", "preventDefault"],
+    },
+
+    stopImmediatePropagation: {
+        category: "Event",
+        description:
+            "Stops event propagation and prevents remaining listeners on the current element from being called.",
+        syntax: ["event.stopImmediatePropagation()"],
+        returns: "undefined",
+        notes: [
+            "Also prevents propagation to subsequent elements.",
+            "Does not cancel the default browser action.",
+        ],
+        seeAlso: ["stopPropagation", "preventDefault"],
+    },
 };
+
+export function getDocumentation(word) {
+    if (!word) return null;
+    return (
+        JS_KEYWORD_DOCUMENTATION[word] ??
+        DOM_API_DOCUMENTATION[word] ??
+        DOM_API_DOCUMENTATION[word === "event" ? "Event" : word] ??
+        null
+    );
+}
